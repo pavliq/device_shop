@@ -1,4 +1,4 @@
-/* Variables */
+/* ==VARIABLES== */
 
 :root {
     --basic-black: #000000;
@@ -10,15 +10,21 @@
     --special-yellow: #f7e296;
     --special-green: #91c92f;
     --special-yellow-dark: #f0c52e;
+    --special-grey-light: #f2f2f2;
+    --special-grey-medium: #dcdcdc;
+    --special-grey-link: #d9d9d9;
     --error: #f6dada;
     --white-30: rgba(255, 255, 255, 0.3);
     --white-60: rgba(255, 255, 255, 0.6);
     --white-70: rgba(255, 255, 255, 0.7);
     --black-30: rgba(0, 0, 0, 0.3);
     --black-40: rgba(0, 0, 0, 0.4);
+    --black-60: rgba(0, 0, 0, 0.6);
+
+    --special: #ac1414;
 }
 
-/* Fonts */
+/* ==FONTS== */
 
 @font-face {
     font-family: "Open Sans";
@@ -52,7 +58,7 @@
     url("../fonts/Gilroy-ExtraBold.woff") format("woff");
 }
 
-/* Global */
+/* ==GLOBAL== */
 
 .visually-hidden {
     position: absolute;
@@ -75,6 +81,10 @@
 
 .reset-text {
     margin: 0;
+}
+
+.reset-link {
+    color: var(--basic-black);
 }
 
 .page {
@@ -102,10 +112,41 @@ img {
     text-decoration: none;
 }
 
-/* Header */
+.reset-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.basic-button {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+
+.basic-button:hover {
+    background-color: var(--special-yellow-dark);
+}
+
+.basic-button:active {
+    color: var(--black-30);
+}
+
+/* ==HEADER== */
 
 .page-header {
     background-color: var(--special-yellow);
+}
+
+.header-logo:hover {
+    opacity: 0.6;
+}
+
+.header-logo:active {
+    opacity: 0.3;
 }
 
 .user-navigation {
@@ -114,8 +155,12 @@ img {
     font-weight: 300;
 }
 
-.user-navigation a {
-    color: var(--basic-black);
+.user-navigation-link:hover {
+    opacity: 0.6;
+}
+
+.user-navigation-link:active {
+    opacity: 0.3;
 }
 
 .search-link {
@@ -125,13 +170,21 @@ img {
     color: var(--black-30);
 }
 
+.search-link:hover {
+    color: var(--black-60);
+}
+
 .site-navigation {
     text-transform: uppercase;
     letter-spacing: 3.6px;
 }
 
-.site-navigation a {
-    color: var(--basic-black);
+.site-navigation-link:hover {
+    opacity: 0.6;
+}
+
+.site-navigation-link:active {
+    opacity: 0.3;
 }
 
 .catalog-list {
@@ -142,7 +195,15 @@ img {
     letter-spacing: normal;
 }
 
-/* Slider */
+.catalog-list-link:hover {
+    opacity: 0.6;
+}
+
+.catalog-list-link:active {
+    opacity: 0.3;
+}
+
+/* ==SLIDER== */
 
 .slider-header {
     font-size: 47px;
@@ -154,8 +215,354 @@ img {
     font-weight: 300;
 }
 
+.slider-numbers {
+    font-family: "Gilroy", sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.slider-description {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+}
+
 .slider-link {
     color: var(--basic-black);
     text-transform: uppercase;
     letter-spacing: 3.6px;
+}
+
+.slider-link:hover {
+    background-color: var(--special-yellow-dark);
+}
+
+.slider-link:active {
+    color: var(--black-30);
+}
+
+/* ==POPULAR== */
+
+.popular {
+    letter-spacing: 0.9px;
+}
+
+.popular-link:active {
+    opacity: 0.3;
+}
+
+/* ==SERVICES== */
+
+.services-button {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+
+.services-button:hover {
+    background-color: var(--special-yellow-dark);
+}
+
+.services-button:active {
+    color: var(--special-yellow);
+    background-color: var(--basic-black);
+}
+
+.services-button-active {
+    color: var(--special-yellow);
+    background-color: var(--basic-black);
+}
+
+.services-header {
+    font-size: 47px;
+    letter-spacing: 9.4px;
+}
+
+.services-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+/* ==ABOUT== */
+
+.about-header {
+    font-size: 47px;
+    letter-spacing: 9.4px;
+}
+
+.about-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.about-list {
+    font-size: 16px;
+}
+
+.about-link {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+
+.about-link:hover {
+    background-color: var(--special-yellow-dark);
+}
+
+.about-link:active {
+    color: var(--black-30);
+}
+
+/* ==CONTACTS== */
+
+.contacts-header {
+    font-size: 47px;
+    letter-spacing: 9.4px;
+}
+
+.contacts-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.contacts-link {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+
+.contacts-link:hover {
+    background-color: var(--special-yellow-dark);
+}
+
+.contacts-link:active {
+    color: var(--black-30);
+}
+
+/* ==FOOTER== */
+.page-footer {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--basic-white);
+    background-color: var(--basic-dark);
+}
+
+.footer-logo:hover {
+    opacity: 0.6;
+}
+
+.footer-logo:active {
+    opacity: 0.3;
+}
+
+.footer-site-navigation {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+}
+
+.footer-link {
+    color: var(--basic-white);
+}
+
+.footer-link:hover {
+    color: var(--white-60);
+}
+
+.footer-link:active {
+    color: var(--white-30);
+}
+
+.footer-phone {
+    color: var(--basic-white);
+}
+
+.social-link {
+    fill-opacity: 0.6;
+}
+
+.social-link:hover {
+    fill-opacity: 0.3;
+}
+
+.social-link:active {
+    fill-opacity: 0.1;
+}
+
+/* ==MODAL== */
+.feedback-item input, .feedback-item textarea {
+    color: var(--black-40);
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--special-grey-light);
+    border: none;
+}
+
+.feedback-button {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    border: none;
+    background-color: transparent;
+}
+
+.feedback-button:hover {
+    background-color: var(--special-yellow-dark);
+}
+
+.feedback-button:active {
+    color: var(--black-30);
+}
+
+/* ==CATALOG== */
+
+.breadcrumbs-list {
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.3;
+}
+
+.breadcrumbs-list a:hover {
+    opacity: 0.6;
+}
+
+.breadcrumbs-list a:active {
+    opacity: 0.1%;
+}
+
+/* ==FILTER== */
+
+.toggle-text {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.filter {
+    background-color: var(--basic-grey-light);
+}
+
+.filter-header {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    background-color: var(--special-grey-medium);
+}
+
+.filter-fieldset {
+    border: none;
+}
+
+.filter-fieldset label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.filter-legend {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+}
+
+/* ==SORTING== */
+
+.sorting {
+    background-color: var(--basic-grey-light);
+}
+
+.sorting-header {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.sorting-list-link {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.3;
+}
+
+.sorting-list-active {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ==GOODS== */
+
+.good-name {
+    letter-spacing: 0.9px;
+}
+
+.good-price {
+    font-weight: 300;
+    letter-spacing: 0.8px;
+}
+
+.compare-link {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+    opacity: 0.5;
+}
+
+.compare-link:hover {
+    opacity: 1;
+}
+
+.compare-link:active {
+    opacity: 0.2;
+}
+
+.new-label {
+    font-family: "Gilroy", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--black-30);
+}
+
+/* ==PAGINATION== */
+
+.pagination {
+    background-color: var(--basic-grey-light);
+}
+
+.pagination-link {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: var(--black-30);
+}
+
+.pagination-link:hover {
+    color: var(--black-60);
+}
+
+.pagination-link:active {
+    color: var(--basic-black);
+}
+
+.pagination-back, .pagination-forward, .pagination-current {
+    color: var(--basic-black);
+}
+
+.pagination-back:hover, .pagination-forward:hover {
+    background-color: var(--special-grey-link);
+}
+
+.pagination-back:active, .pagination-forward:active {
+    background-color: var(--special-grey-link);
+    color: var(--black-30);
 }
